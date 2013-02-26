@@ -13,7 +13,7 @@ public class PecasTest {
 		
 		try{
 			peca.setNome(null);
-			fail("Deveria ter lancado uma IllegalArgumentException");
+			 fail("Deveria ter lancado uma IllegalArgumentException");
 		}catch(IllegalArgumentException ex){					
 			assertTrue(true);
 		}
