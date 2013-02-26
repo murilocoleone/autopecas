@@ -13,11 +13,7 @@ public class PecasTest {
 		
 		try{
 			peca.setNome(null);
-<<<<<<< HEAD
-			fail("Deveria ter lancado uma NullPointerException");
-=======
-			fail("Deveria ter lancado uma IllegalArgumentException");
->>>>>>> branch 'master' of https://github.com/murilocoleone/autopecas.git
+			 fail("Deveria ter lancado uma IllegalArgumentException");
 		}catch(IllegalArgumentException ex){					
 			assertTrue(true);
 		}
