@@ -2,7 +2,7 @@ package br.com.autopecas.model;
 
 public class Peca {
 	
-	String nome;
+	String nome; 
 	
 	public void setNome(String nome) {
 		validaNome(nome);
