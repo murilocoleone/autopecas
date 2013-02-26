@@ -4,7 +4,7 @@ public class Peca {
 	
 	String nome; 
 	
-	public void setNome(String nome) {
+	public void setNome(String nome) { 
 		validaNome(nome);
 		this.nome = nome;
 	}
