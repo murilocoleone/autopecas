@@ -2,7 +2,7 @@ package br.com.autopecas.model;
 
 public class Peca {
 	
-	private String nome; 
+	private String nome;
 	
 	public String getNome() {
 		return nome;
