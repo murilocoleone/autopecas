@@ -8,36 +8,23 @@ public class PecasTest {
 
 	private Peca peca = new Peca();
 	
-	@Test
-	public void testeSeNomePecaRejeitaValorNull(){		
-		
-		try{
-			peca.setNome(null);
-			fail("Deveria ter lancado uma IllegalArgumentException");
-		}catch(IllegalArgumentException ex){					
-			assertTrue(true);
-		}
-		
+	@Test(expected=IllegalArgumentException.class)
+	public void testSePecaLancaIllegalArgumentExceptionComNomeNull(){	
+		final String nome = null;
+		peca.setNome(nome);						
 	}
 	
-	@Test
-	public void testeSeNomePecaRejeitaValorVazio(){
-		
-		try{
-			peca.setNome("");
-			fail("Deveria ter lancado uma IllegalArgumentException");
-		}catch(IllegalArgumentException ex){
-			assertTrue(true);
-		}
-		
-	}	
+	@Test(expected=IllegalArgumentException.class)
+	public void testSePecaLancaIllegalArgumentExceptionComValorNomeVazio(){
+		final String nome = "";
+		peca.setNome(nome);				
+	}		
 	
 	@Test
-	public void testeValorNome(){
-				
-		peca.setNome("Retrovisor");
-		assertEquals("Valor de nome deveria ser Retrovisor", "Retrovisor", peca.nome);
-		
+	public void testValorNome(){
+		final String nome = "Retrovisor";
+		peca.setNome(nome);
+		assertEquals("Valor de nome deveria ser Retrovisor", "Retrovisor", peca.getNome());		
 	}
 
 }
