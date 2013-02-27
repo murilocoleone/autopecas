@@ -77,5 +77,24 @@ public class PecasTest {
 		peca.setPreco(valor);
 		assertEquals("Valor deveria ser 200", new Double(200), peca.getPreco());
 	}
+	
+	@Test
+	public void testValorParaQuantidadePeca(){
+		final int quantidade = 12;
+		peca.setQuantidade(quantidade);
+		assertEquals("Quantidade deveria ser 12", new Integer(12), peca.getQuantidade());
+	}
+	
+	@Test(expected=IllegalArgumentException.class)
+	public void testSeLancaIllegalArgumentExceptionComValorNegativoParaQuantidadePeca(){
+		final int quantidade = -1;
+		peca.setQuantidade(quantidade);		
+	}
+	
+	@Test(expected=IllegalArgumentException.class)
+	public void testSeLancaIllegalArgumentExceptionComValorNullParaQuantidadePeca(){
+		final Integer quantidade = null;
+		peca.setQuantidade(quantidade);
+	}
 
 }
