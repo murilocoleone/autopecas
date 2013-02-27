@@ -1,5 +1,11 @@
 package br.com.autopecas.model;
 
+/**
+ * Classe de teste para classe de negocio Peca.
+ * Testes realizados o o framework JUnit4.
+ * @author Murilo
+ */
+
 import static org.junit.Assert.*;
 
 import org.junit.Test;
