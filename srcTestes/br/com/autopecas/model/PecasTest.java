@@ -8,11 +8,17 @@ package br.com.autopecas.model;
 
 import static org.junit.Assert.*;
 
+import org.junit.Before;
 import org.junit.Test;
 
 public class PecasTest {
 
-	private Peca peca = new Peca();
+	private Peca peca;
+	
+	@Before
+	public void setUp(){
+		peca = new Peca();
+	}
 	
 	@Test(expected=IllegalArgumentException.class)
 	public void testSeLancaIllegalArgumentExceptionComNomePecaNull(){	
