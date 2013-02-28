@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--AgileJ Ltd. (http://www.agilej.com)--><ajsv>
+    <diagram creationDate="2013-Fev-28 02:37" filterScript="" licenseGrade="evaluation" licenseeName="anon" licenseeOrganization="unknown" version="1.7.12.v20121026-1649">
+        <class className="br.com.autopecas.model.PecasTest" project="autopecas" xLocation="-136" yLocation="83"/>
+        <class className="br.com.autopecas.validadores.ValidadorPecasTest" project="autopecas" xLocation="379" yLocation="83"/>
+    </diagram>
+</ajsv>

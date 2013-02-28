@@ -1,6 +1,7 @@
 package br.com.autopecas.model;
 
-import br.com.autopecas.validadores.ValidaPeca;
+import br.com.autopecas.validadores.Validador;
+import br.com.autopecas.validadores.ValidadorPeca;
 
 /**
  * Classe que simula modelo de Peca da minha aplicacao.
@@ -14,14 +15,14 @@ public class Peca {
 	private Double preco;
 	private Integer quantidade;
 	
-	private ValidaPeca validador = new ValidaPeca();	
+	private Validador validador = new ValidadorPeca();	
 	
 	public String getNome() {
 		return nome;
 	}
 	
 	public void setNome(String nome) { 
-		validador.validaNome(nome);
+		validador.valida("nome", nome);
 		this.nome = nome;
 	}	
 	
@@ -30,7 +31,7 @@ public class Peca {
 	}
 		
 	public void setPreco(Double preco) {
-		validador.validaPreco(preco);		
+		validador.valida("preco", preco);		
 		this.preco = preco;
 	}
 	
@@ -39,7 +40,7 @@ public class Peca {
 	}
 	
 	public void setQuantidade(Integer quantidade){
-		validador.validaQuantidade(quantidade);
+		validador.valida("quantidade", quantidade);
 		this.quantidade = quantidade;
 	}		
 
